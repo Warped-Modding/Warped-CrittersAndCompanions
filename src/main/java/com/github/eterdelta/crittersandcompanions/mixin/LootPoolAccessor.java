@@ -6,6 +6,7 @@ import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.gen.Accessor;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
@@ -27,5 +28,6 @@ public interface LootPoolAccessor {
     LootItemFunction[] getFunctions();
 
     @Accessor
+    @Mutable
     void setEntries(LootPoolEntryContainer[] entries);
 }
