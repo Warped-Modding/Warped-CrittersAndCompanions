@@ -41,36 +41,6 @@ public class SpawnHandler {
         BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.BiomeCategory.JUNGLE), MobCategory.CREATURE, CACEntities.RED_PANDA.get(), 6, 1, 2);
 
         BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.BiomeCategory.PLAINS), MobCategory.CREATURE, CACEntities.FERRET.get(), 3, 2, 3);
-//
-//        if (event.getName() != null) {
-//            ResourceKey<Biome> biome = ResourceKey.create(ForgeRegistries.Keys.BIOMES, event.getName());
-//
-//            if (biome == Biomes.RIVER) {
-//                event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(CACEntities.OTTER.get(), 2, 3, 5));
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.KOI_FISH.get(), 4, 2, 5));
-//                event.getSpawns().getSpawner(MobCategory.AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.DRAGONFLY.get(), 6, 1, 1));
-//            } else if (biome == Biomes.OCEAN || biome == Biomes.DEEP_OCEAN) {
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.SEA_BUNNY.get(), 32, 1, 2));
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.DUMBO_OCTOPUS.get(), 4, 1, 1));
-//            } else if (biome == Biomes.LUKEWARM_OCEAN || biome == Biomes.DEEP_LUKEWARM_OCEAN) {
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.SEA_BUNNY.get(), 32, 1, 3));
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.DUMBO_OCTOPUS.get(), 4, 1, 1));
-//            } else if (biome == Biomes.WARM_OCEAN) {
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.SEA_BUNNY.get(), 64, 1, 4));
-//                event.getSpawns().getSpawner(MobCategory.WATER_AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.DUMBO_OCTOPUS.get(), 6, 1, 1));
-//            } else if (biome == Biomes.BIRCH_FOREST || biome == Biomes.FOREST) {
-//                event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(CACEntities.FERRET.get(), 3, 2, 3));
-//            }
-//
-//            if (event.getCategory() == Biome.BiomeCategory.FOREST) {
-//                event.getSpawns().getSpawner(MobCategory.AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.LEAF_INSECT.get(), 10, 1, 1));
-//            } else if (event.getCategory() == Biome.BiomeCategory.JUNGLE) {
-//                event.getSpawns().getSpawner(MobCategory.AMBIENT).add(new MobSpawnSettings.SpawnerData(CACEntities.LEAF_INSECT.get(), 8, 1, 1));
-//                event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(CACEntities.RED_PANDA.get(), 6, 1, 2));
-//            } else if (event.getCategory() == Biome.BiomeCategory.PLAINS) {
-//                event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(CACEntities.FERRET.get(), 3, 2, 3));
-//            }
-//        }
     }
 
     public static void registerSpawnPlacements() {
