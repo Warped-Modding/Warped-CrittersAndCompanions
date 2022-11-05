@@ -2,7 +2,9 @@ package com.github.eterdelta.crittersandcompanions;
 
 import com.github.eterdelta.crittersandcompanions.client.renderer.geo.entity.*;
 import com.github.eterdelta.crittersandcompanions.entity.*;
+import com.github.eterdelta.crittersandcompanions.handler.LootHandler;
 import com.github.eterdelta.crittersandcompanions.handler.SpawnHandler;
+import com.github.eterdelta.crittersandcompanions.mixin.CatMixin;
 import com.github.eterdelta.crittersandcompanions.registry.CACEntities;
 import com.github.eterdelta.crittersandcompanions.registry.CACItems;
 import com.github.eterdelta.crittersandcompanions.registry.CACSounds;
@@ -15,6 +17,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 import software.bernie.geckolib3.GeckoLib;
 
 public class CrittersAndCompanions implements ModInitializer, ClientModInitializer {
@@ -44,6 +47,8 @@ public class CrittersAndCompanions implements ModInitializer, ClientModInitializ
         SpawnHandler.registerSpawnPlacements();
         onAttributeCreation();
 //        eventBus.addListener(this::registerEntityRenderers);
+
+        LootHandler.onLootTableLoad();
     }
 
     private void onAttributeCreation() {
