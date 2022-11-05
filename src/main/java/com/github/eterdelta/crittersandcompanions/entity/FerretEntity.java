@@ -3,6 +3,7 @@ package com.github.eterdelta.crittersandcompanions.entity;
 import com.github.eterdelta.crittersandcompanions.CrittersAndCompanions;
 import com.github.eterdelta.crittersandcompanions.registry.CACEntities;
 import com.github.eterdelta.crittersandcompanions.registry.CACSounds;
+import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -33,7 +34,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraftforge.event.ForgeEventFactory;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -48,7 +48,7 @@ import java.util.UUID;
 public class FerretEntity extends TamableAnimal implements IAnimatable {
     private static final EntityDataAccessor<Boolean> SLEEPING = SynchedEntityData.defineId(FerretEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> VARIANT = SynchedEntityData.defineId(FerretEntity.class, EntityDataSerializers.INT);
-    private static final TagKey<Item> FOODS_TAG = ItemTags.create(new ResourceLocation(CrittersAndCompanions.MODID, "ferret_food"));
+    private static final TagKey<Item> FOODS_TAG = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(CrittersAndCompanions.MODID, "ferret_food"));
     private final AnimationFactory factory = new AnimationFactory(this);
 
     public FerretEntity(EntityType<? extends FerretEntity> entityType, Level level) {
@@ -144,7 +144,7 @@ public class FerretEntity extends TamableAnimal implements IAnimatable {
                     handStack.shrink(1);
                 }
                 if (!this.level.isClientSide()) {
-                    if (this.random.nextInt(10) == 0 && !ForgeEventFactory.onAnimalTame(this, player)) {
+                    if (this.random.nextInt(10) == 0 /*&& !ForgeEventFactory.onAnimalTame(this, player)*/) {
                         this.tame(player);
                         this.level.broadcastEntityEvent(this, (byte) 7);
                     } else {

@@ -80,7 +80,7 @@ tasks {
     }
 
     processResources {
-        val resourceTargets = listOf("META-INF/mods.toml", "pack.mcmeta", "fabric.mod.json")
+        val resourceTargets = listOf("pack.mcmeta", "fabric.mod.json")
 
         val replaceProperties = mapOf(
             "version" to project.version as String,

@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 public interface LootPoolAccessor {
 
     @Invoker("<init>")
-    static LootPool make(LootPoolEntryContainer[] entries, LootItemCondition[] conditions, LootItemFunction[] functions, NumberProvider rolls, NumberProvider bonusRolls, String name) {
+    static LootPool make(LootPoolEntryContainer[] entries, LootItemCondition[] conditions, LootItemFunction[] functions, NumberProvider rolls, NumberProvider bonusRolls) {
         throw new IllegalStateException();
     }
 
@@ -25,4 +25,7 @@ public interface LootPoolAccessor {
 
     @Accessor
     LootItemFunction[] getFunctions();
+
+    @Accessor
+    void setEntries(LootPoolEntryContainer[] entries);
 }

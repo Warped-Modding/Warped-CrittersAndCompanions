@@ -16,11 +16,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.almostreliable.fastwbf.FastWBF"
+      "com.github.eterdelta.crittersandcompanions.CrittersAndCompanions"
+    ],
+    "client": [
+      "com.github.eterdelta.crittersandcompanions.CrittersAndCompanions"
     ]
   },
   "mixins": [
-    "fastwbf.mixins.json"
+    "crittersandcompanions.mixins.json"
   ],
   "depends": {
     "fabric": "*",
