@@ -19,7 +19,7 @@ public class DrownedMixin {
     @Inject(method = "finalizeSpawn", at = @At("RETURN"))
     private void appendClamItem(ServerLevelAccessor serverLevelAccessor, DifficultyInstance difficultyInstance, MobSpawnType mobSpawnType, SpawnGroupData spawnGroupData, CompoundTag compoundTag, CallbackInfoReturnable<SpawnGroupData> cir) {
         var drowned = (Drowned) (Object) this;
-        if (mobSpawnType == MobSpawnType.NATURAL && drowned.getRandom().nextFloat() < 0.9F) {
+        if (mobSpawnType == MobSpawnType.NATURAL && drowned.getRandom().nextFloat() < 0.05F) {
             drowned.setItemInHand(drowned.getUsedItemHand(), new ItemStack(CACItems.CLAM.get()));
         }
     }
