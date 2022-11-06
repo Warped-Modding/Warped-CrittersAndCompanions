@@ -30,9 +30,8 @@ extensions.configure<JavaPluginExtension> {
 }
 
 repositories {
-    mavenLocal()
-    mavenCentral()
     maven("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
+    mavenCentral()
 }
 
 loom {
@@ -43,10 +42,6 @@ loom {
             it.runDir("run")
             it.vmArgs("-XX:+IgnoreUnrecognizedVMOptions", "-XX:+AllowEnhancedClassRedefinition")
         }
-    }
-
-    mixin {
-        defaultRefmapName.set("$modId.refmap.json")
     }
 }
 
