@@ -21,7 +21,7 @@ val mappingsVersion: String by project
 val githubUser: String by project
 val githubRepo: String by project
 
-base.archivesName.set(modId)
+base.archivesName.set("$modId-fabric")
 version = "$minecraftVersion-$modVersion"
 
 extensions.configure<JavaPluginExtension> {
