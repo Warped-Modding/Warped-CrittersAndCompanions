@@ -48,12 +48,6 @@ jobs:
       - name: Assemble the JARs
         run: ./gradlew assemble
 
-      - name: Move JARs to build directory
-        run: |
-          mkdir -p build/libs
-          mv -f Forge/build/libs/*.jar build/libs
-          mv -f Fabric/build/libs/*.jar build/libs
-
       - name: Collect version information
         run: |
           shopt -s failglob # print a warning if a glob does not match anything
