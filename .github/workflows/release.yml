@@ -10,7 +10,7 @@ env:
   JAVA_DIST: 'zulu'
   JAVA_VERSION: 17
   MOD_ID: 'crittersandcompanions'
-  MOD_NAME: 'CrittersAndCompanions'
+  MOD_NAME: 'Critters And Companions'
 
 jobs:
   release:
@@ -75,7 +75,7 @@ jobs:
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           files: build/libs/${{ env.MOD_ID }}-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.MOD_VERSION }}.jar
-          name: ${{ env.MOD_ID }}-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.MOD_VERSION }}
+          name: ${{ env.MOD_NAME }} [Fabric] ${{ env.MOD_VERSION }} for ${{ env.MINECRAFT_VERSION }}
           version: ${{ env.MINECRAFT_VERSION }}-${{ env.MOD_VERSION }}+fabric
           version-type: ${{ env.RELEASE_TYPE }}
           changelog-file: changes.md
