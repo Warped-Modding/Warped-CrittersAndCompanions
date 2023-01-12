@@ -21,7 +21,7 @@ public class SpawnHandler {
 
     public static void registerBiomeModifications() {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.RIVER), MobCategory.WATER_CREATURE, CACEntities.OTTER.get(), 2, 3, 5);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.RIVER), MobCategory.WATER_CREATURE, CACEntities.KOI_FISH.get(), 4, 2, 5);
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.RIVER), MobCategory.WATER_AMBIENT, CACEntities.KOI_FISH.get(), 4, 2, 5);
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.RIVER), MobCategory.AMBIENT, CACEntities.DRAGONFLY.get(), 6, 1, 1);
 
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.OCEAN, Biomes.DEEP_OCEAN), MobCategory.WATER_CREATURE, CACEntities.SEA_BUNNY.get(), 32, 1, 2);
