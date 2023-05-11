@@ -54,7 +54,6 @@ public class CrittersAndCompanions implements ModInitializer, ClientModInitializ
     private void onAttributeCreation() {
         FabricDefaultAttributeRegistry.register(CACEntities.OTTER.get(), OtterEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(CACEntities.KOI_FISH.get(), KoiFishEntity.createAttributes());
-        FabricDefaultAttributeRegistry.register(CACEntities.DRAGONFLY.get(), DragonflyEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(CACEntities.SEA_BUNNY.get(), SeaBunnyEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(CACEntities.FERRET.get(), FerretEntity.createAttributes());
         FabricDefaultAttributeRegistry.register(CACEntities.DUMBO_OCTOPUS.get(), DumboOctopusEntity.createAttributes());
@@ -65,7 +64,6 @@ public class CrittersAndCompanions implements ModInitializer, ClientModInitializ
     private void registerEntityRenderers() {
         EntityRendererRegistry.register(CACEntities.OTTER.get(), OtterRenderer::new);
         EntityRendererRegistry.register(CACEntities.KOI_FISH.get(), KoiFishRenderer::new);
-        EntityRendererRegistry.register(CACEntities.DRAGONFLY.get(), DragonflyRenderer::new);
         EntityRendererRegistry.register(CACEntities.SEA_BUNNY.get(), SeaBunnyRenderer::new);
         EntityRendererRegistry.register(CACEntities.FERRET.get(), FerretRenderer::new);
         EntityRendererRegistry.register(CACEntities.DUMBO_OCTOPUS.get(), DumboOctopusRenderer::new);
