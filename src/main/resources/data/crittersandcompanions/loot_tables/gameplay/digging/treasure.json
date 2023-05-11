@@ -16,7 +16,7 @@
                 {
                     "type": "minecraft:item",
                     "weight": 4,
-                    "name": "w-crittersandcompanions:music_disc_walk"
+                    "name": "crittersandcompanions:music_disc_walk"
                 }
             ]
         }

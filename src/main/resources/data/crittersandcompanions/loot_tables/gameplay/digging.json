@@ -6,17 +6,17 @@
                 {
                     "type": "minecraft:loot_table",
                     "weight": 50,
-                    "name": "w-crittersandcompanions:gameplay/digging/junk"
+                    "name": "crittersandcompanions:gameplay/digging/junk"
                 },
                 {
                     "type": "minecraft:loot_table",
                     "weight": 30,
-                    "name": "w-crittersandcompanions:gameplay/digging/common"
+                    "name": "crittersandcompanions:gameplay/digging/common"
                 },
                 {
                     "type": "minecraft:loot_table",
                     "weight": 20,
-                    "name": "w-crittersandcompanions:gameplay/digging/treasure"
+                    "name": "crittersandcompanions:gameplay/digging/treasure"
                 }
             ]
         }
