@@ -1,10 +1,4 @@
 {
-  "entity.dragonfly.ambient": {
-    "sounds": [
-      "crittersandcompanions:entity/dragonfly/ambient"
-    ],
-    "subtitle": "subtitles.crittersandcompanions.dragonfly.ambient"
-  },
   "entity.ferret.ambient": {
     "sounds": [
       "crittersandcompanions:entity/ferret/ambient_1",
@@ -30,6 +24,14 @@
       "crittersandcompanions:entity/ferret/hurt_2"
     ],
     "subtitle": "subtitles.crittersandcompanions.ferret.hurt"
+  },
+  "music.walk": {
+    "sounds": [
+      {
+        "name": "crittersandcompanions:music/walk",
+        "stream": true
+      }
+    ]
   },
   "entity.leaf_insect.death": {
     "sounds": [
