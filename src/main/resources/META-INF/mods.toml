@@ -4,11 +4,13 @@ license="MIT"
 [[mods]]
 modId="crittersandcompanions"
 version="${file.jarVersion}"
-displayName="Critters and Companions"
+displayName="{Warped} Critters and Companions"
 logoFile="logo.png"
 authors="Joosh, EterDelta"
 description='''
 Critters and Companions is a vanilla-style creature mod which fills the overworld with new animals.
+!Warped Version!
+This is not an official version of Critters and Companions, please report all issues to the Warped-Modding repo.
 '''
 
 [[dependencies.crittersandcompanions]]
