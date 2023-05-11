@@ -1,18 +1,16 @@
 {
   "entity.crittersandcompanions.otter": "Lontra",
   "entity.crittersandcompanions.koi_fish": "Carpa",
-  "entity.crittersandcompanions.dragonfly": "Libélula",
   "entity.crittersandcompanions.sea_bunny": "Coelho-do-mar",
   "entity.crittersandcompanions.ferret": "Furão",
   "entity.crittersandcompanions.dumbo_octopus": "Polvo-dumbo",
   "entity.crittersandcompanions.red_panda": "Panda-vermelho",
   "entity.crittersandcompanions.leaf_insect": "Bicho-folha",
 
-  "itemGroup.crittersandcompanions": "Bichinhos e Companheiros",
+  "itemGroup.crittersandcompanions": "{Warped} Bichinhos e Companheiros",
 
   "item.crittersandcompanions.otter_spawn_egg": "Invocar Lontra",
   "item.crittersandcompanions.koi_fish_spawn_egg": "Invocar Carpa",
-  "item.crittersandcompanions.dragonfly_spawn_egg": "Invocar Libélula",
   "item.crittersandcompanions.sea_bunny_spawn_egg": "Invocar Coelho-do-mar",
   "item.crittersandcompanions.ferret_spawn_egg": "Invocar Furão",
   "item.crittersandcompanions.dumbo_octopus_spawn_egg": "Invocar Polvo-dumbo",
@@ -33,7 +31,6 @@
   "pearl_necklace.drowned_range": "-%s%% Alcance de detecção de Afogado",
   "pearl_necklace.guardian_range": "-%s%% Alcance de detecção de Guardião",
 
-  "subtitles.crittersandcompanions.dragonfly.ambient": "Libélula zumbe",
   "subtitles.crittersandcompanions.ferret.ambient": "Furão guincha",
   "subtitles.crittersandcompanions.ferret.death": "Furão morre",
   "subtitles.crittersandcompanions.ferret.hurt": "Furão machucado",

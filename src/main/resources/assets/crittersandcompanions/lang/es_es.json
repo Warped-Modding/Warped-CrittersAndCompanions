@@ -1,18 +1,16 @@
 {
   "entity.crittersandcompanions.otter": "Nutria",
   "entity.crittersandcompanions.koi_fish": "Pez koi",
-  "entity.crittersandcompanions.dragonfly": "Libélula",
   "entity.crittersandcompanions.sea_bunny": "Conejo de mar",
   "entity.crittersandcompanions.ferret": "Hurón",
   "entity.crittersandcompanions.dumbo_octopus": "Pulpo dumbo",
   "entity.crittersandcompanions.red_panda": "Panda rojo",
   "entity.crittersandcompanions.leaf_insect": "Insecto hoja",
 
-  "itemGroup.crittersandcompanions.items": "Critters and Companions",
+  "itemGroup.crittersandcompanions.items": "{Warped} Critters and Companions",
 
   "item.crittersandcompanions.otter_spawn_egg": "Generar nutria",
   "item.crittersandcompanions.koi_fish_spawn_egg": "Generar pez koi",
-  "item.crittersandcompanions.dragonfly_spawn_egg": "Generar libélula",
   "item.crittersandcompanions.sea_bunny_spawn_egg": "Generar conejo de mar",
   "item.crittersandcompanions.ferret_spawn_egg": "Generar hurón",
   "item.crittersandcompanions.dumbo_octopus_spawn_egg": "Generar pulpo dumbo",
@@ -33,7 +31,6 @@
   "pearl_necklace.drowned_range": "-%s%% Rango de deteción de Ahogados",
   "pearl_necklace.guardian_range": "-%s%% Rango de deteción de Guardianes",
 
-  "subtitles.crittersandcompanions.dragonfly.ambient": "Libélula zumba",
   "subtitles.crittersandcompanions.ferret.ambient": "Hurón chilla",
   "subtitles.crittersandcompanions.ferret.death": "Hurón muere",
   "subtitles.crittersandcompanions.ferret.hurt": "Hurón herido",
