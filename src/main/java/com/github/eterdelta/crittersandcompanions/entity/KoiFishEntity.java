@@ -39,7 +39,7 @@ public class KoiFishEntity extends AbstractSchoolingFish implements IAnimatable 
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 8.0D).add(Attributes.MOVEMENT_SPEED, 0.1D);
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 3.0D).add(Attributes.MOVEMENT_SPEED, 0.1D);
     }
 
     @Override
@@ -118,7 +118,7 @@ public class KoiFishEntity extends AbstractSchoolingFish implements IAnimatable 
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor levelAccessor, DifficultyInstance difficultyInstance, MobSpawnType mobSpawnType, SpawnGroupData spawnGroupData, CompoundTag bucketCompound) {
         if (!mobSpawnType.equals(MobSpawnType.BUCKET) || bucketCompound == null || !bucketCompound.contains("BucketVariant")) {
-            this.setVariant(this.random.nextInt(0, 2));
+            this.setVariant(this.random.nextInt(0, 21));
         }
         return super.finalizeSpawn(levelAccessor, difficultyInstance, mobSpawnType, spawnGroupData, bucketCompound);
     }
@@ -148,6 +148,6 @@ public class KoiFishEntity extends AbstractSchoolingFish implements IAnimatable 
     }
 
     public void setVariant(int variant) {
-        this.entityData.set(VARIANT, Mth.clamp(variant, 0, 1));
+        this.entityData.set(VARIANT, Mth.clamp(variant, 0, 20));
     }
 }

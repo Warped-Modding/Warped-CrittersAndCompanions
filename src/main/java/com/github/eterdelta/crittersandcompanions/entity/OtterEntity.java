@@ -60,7 +60,6 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.manager.InstancedAnimationFactory;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import java.util.EnumSet;
@@ -86,7 +85,7 @@ public class OtterEntity extends Animal implements IAnimatable {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 16.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 3.0D);
+        return Mob.createMobAttributes().add(Attributes.MAX_HEALTH, 10.0D).add(Attributes.MOVEMENT_SPEED, 0.25D).add(Attributes.ATTACK_DAMAGE, 3.0D);
     }
 
     public static boolean checkOtterSpawnRules(EntityType<OtterEntity> entityType, LevelAccessor levelAccessor, MobSpawnType spawnType, BlockPos blockPos, RandomSource random) {
@@ -183,15 +182,15 @@ public class OtterEntity extends Animal implements IAnimatable {
                 if (this.eatDelay > 0) {
                     --this.eatDelay;
                 } else {
-                    Vec3 mouthPos = this.calculateMouthPos();
-                    ((ServerLevel) this.level).sendParticles(new ItemParticleOption(ParticleTypes.ITEM, this.getMainHandItem()), mouthPos.x(), mouthPos.y(), mouthPos.z(), 2, 0.0D, 0.1D, 0.0D, 0.05D);
-
                     if (this.getRandom().nextDouble() < 0.5D) {
                         this.playSound(CACSounds.OTTER_EAT.get(), 1.2F, 1.0F);
                     }
                     if (--this.eatTime <= 0) {
                         this.eat(this.level, this.getMainHandItem());
                         this.setEating(false);
+                    } else {
+                        Vec3 mouthPos = this.calculateMouthPos();
+                        ((ServerLevel) this.level).sendParticles(new ItemParticleOption(ParticleTypes.ITEM, this.getMainHandItem()), mouthPos.x(), mouthPos.y(), mouthPos.z(), 2, 0.0D, 0.1D, 0.0D, 0.05D);
                     }
                 }
             } else {
@@ -280,6 +279,7 @@ public class OtterEntity extends Animal implements IAnimatable {
             this.moveRelative(this.getSpeed(), speed);
             this.move(MoverType.SELF, this.getDeltaMovement());
             this.setDeltaMovement(this.getDeltaMovement().scale(0.9D));
+            this.calculateEntityAnimation(this, false);
         } else {
             super.travel(speed);
         }
@@ -290,7 +290,9 @@ public class OtterEntity extends Animal implements IAnimatable {
         ItemStack handStack = player.getItemInHand(interactionHand);
         if (!this.isEating() && this.isFood(handStack)) {
             this.setItemInHand(InteractionHand.MAIN_HAND, handStack.split(1));
-            handStack.shrink(1);
+            if (!player.getAbilities().instabuild) {
+                handStack.shrink(1);
+            }
             return super.mobInteract(player, interactionHand);
         }
         return InteractionResult.PASS;

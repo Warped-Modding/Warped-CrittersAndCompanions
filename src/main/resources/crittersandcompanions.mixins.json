@@ -13,9 +13,6 @@
     "NearestAttackableTargetGoalMixin",
     "OcelotMixin"
   ],
-  "client": [
-    "ClientPacketListenerMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
   }

@@ -8,7 +8,8 @@
     "${modAuthor}"
   ],
   "contact": {
-    "homepage": "https://almostreliable.com/",
+    "homepage": "https://github.com/Warped-Modding/Warped-CrittersAndCompanions",
+    "issues": "https://github.com/Warped-Modding/Warped-CrittersAndCompanions/issues",
     "sources": "https://github.com/${githubUser}/${githubRepo}"
   },
   "license": "${license}",

@@ -14,11 +14,10 @@ import net.minecraft.world.entity.MobCategory;
 public class CACEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(Registry.ENTITY_TYPE, CrittersAndCompanions.MODID);
 
-    public static final RegistryObject<EntityType<DragonflyEntity>> DRAGONFLY = ENTITIES.register("dragonfly", () -> create(DragonflyEntity::new, MobCategory.AMBIENT, 0.8F, 0.2F));
     public static final RegistryObject<EntityType<DumboOctopusEntity>> DUMBO_OCTOPUS = ENTITIES.register("dumbo_octopus", () -> create(DumboOctopusEntity::new, MobCategory.CREATURE, 0.4F, 0.4F));
     public static final RegistryObject<EntityType<FerretEntity>> FERRET = ENTITIES.register("ferret", () -> create(FerretEntity::new, MobCategory.CREATURE, 0.75F, 0.65F));
     public static final RegistryObject<EntityType<KoiFishEntity>> KOI_FISH = ENTITIES.register("koi_fish", () -> create(KoiFishEntity::new, MobCategory.WATER_AMBIENT, 0.6F, 0.3F));
-    public static final RegistryObject<EntityType<LeafInsectEntity>> LEAF_INSECT = ENTITIES.register("leaf_insect", () -> create(LeafInsectEntity::new, MobCategory.AMBIENT, 0.4F, 0.3F));
+    public static final RegistryObject<EntityType<LeafInsectEntity>> LEAF_INSECT = ENTITIES.register("leaf_insect", () -> create(LeafInsectEntity::new, MobCategory.CREATURE, 0.4F, 0.3F));
     public static final RegistryObject<EntityType<OtterEntity>> OTTER = ENTITIES.register("otter", () -> create(OtterEntity::new, MobCategory.WATER_CREATURE, 0.8F, 0.4F));
     public static final RegistryObject<EntityType<RedPandaEntity>> RED_PANDA = ENTITIES.register("red_panda", () -> create(RedPandaEntity::new, MobCategory.CREATURE, 0.65F, 0.55F));
     public static final RegistryObject<EntityType<SeaBunnyEntity>> SEA_BUNNY = ENTITIES.register("sea_bunny", () -> create(SeaBunnyEntity::new, MobCategory.WATER_AMBIENT, 0.45F, 0.3F));
